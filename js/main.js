@@ -72,8 +72,9 @@ async function main(name) {
             let idMeal=$(this).attr('id')
             deatiles(idMeal)
             $("aside").addClass("hidden")
-            $("section").addClass("hidden")
             $("#dscribtion").removeClass("hidden")
+            $("section").addClass("hidden")
+           
             $('.loading').addClass("hidden")
         })
     } 
@@ -293,6 +294,8 @@ async function mealsCatogry(eslam){
         let idMeal=$(this).attr('id')
         deatiles(idMeal)
         $("section").addClass("hidden")
+         $("aside").addClass("hidden")
+            
         $("#dscribtion").removeClass("hidden")
 
     })}
@@ -313,6 +316,7 @@ async function mealsCountry(demo){
             let idMeal=$(this).attr('id')
             deatiles(idMeal)
             $("section").addClass("hidden")
+            $("aside").addClass("hidden")
             $("#dscribtion").removeClass("hidden")
     
         })
@@ -328,6 +332,7 @@ async function mealsIntegrient(hamada){
             let idMeal=$(this).attr('id')
             deatiles(idMeal)
             $("section").addClass("hidden")
+            $("aside").addClass("hidden")
             $("#dscribtion").removeClass("hidden")
     
         })
@@ -359,6 +364,7 @@ console.log(products)
         let idMeal=$(this).attr('id')
         deatiles(idMeal)
         $("section").addClass("hidden")
+        $("aside").addClass("hidden")
         $("#dscribtion").removeClass("hidden")
 
     })
