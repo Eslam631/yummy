@@ -65,17 +65,17 @@ async function main(name) {
         let api = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`)
         let data = await api.json()
         products =data.meals
-    console.log(products)
+   
         displayDataMain()
         $('.loading').addClass("hidden")
         $(".discripatin").on('click',function(){
             let idMeal=$(this).attr('id')
             deatiles(idMeal)
-            $("aside").addClass("hidden")
-            $("#dscribtion").removeClass("hidden")
+            
             $("section").addClass("hidden")
-           
-            $('.loading').addClass("hidden")
+            $("aside").addClass("hidden")
+               
+           $("#dscribtion").removeClass("hidden")
         })
     } 
   
@@ -121,7 +121,7 @@ $("#dscribtion i").on('click',function(){
 
 $("aside a").on('click',function(e){
     let links=$(e.target).html()
-    console.log(links)
+    
    if(links=="Categories"){
     
     $('section').addClass("hidden")
@@ -162,7 +162,7 @@ try {
     let aoi =await fetch('https://www.themealdb.com/api/json/v1/1/list.php?a=list')
     let data =await aoi.json()
     country=data.meals
-    console.log(country)
+   
     displayDataCountry()
     $('.loading').addClass("hidden")
     $(document).on('click', '.country', function(e) {
@@ -200,7 +200,7 @@ async function live() {
         let aoi =await fetch('https://www.themealdb.com/api/json/v1/1/list.php?i=list')
         let data =await aoi.json()
         ingredients=data.meals
-        console.log(ingredients)
+        
         
         displayDataIngredients()
         $('.loading').addClass("hidden")
@@ -258,9 +258,9 @@ function displayDataDeatiles(){
         <div class=""><img src="${productsByCategory[i].strMealThumb}" class="rounded w-full" alt="">
                     <h2 class="mx-10 text-3xl p-5">${productsByCategory[i].strMeal}</h2>
                 </div>
-                <div class="p-5">
+                <div class="md:p-5">
                     <h2 class="text-2xl font-bold p-3">Instructions</h2>
-                    <p class="p-6">${productsByCategory[i].strInstructions}</p>
+                    <p class="md:p-5">${productsByCategory[i].strInstructions}</p>
 
                     <p class="text-4xl font-bold">Area :${productsByCategory[i].strArea}</p>
                     <p class="text-4xl font-bold">Category :${productsByCategory[i].strCategory}</p>
@@ -316,9 +316,9 @@ async function mealsCountry(demo){
             let idMeal=$(this).attr('id')
             deatiles(idMeal)
             $("section").addClass("hidden")
-            $("aside").addClass("hidden")
+           
             $("#dscribtion").removeClass("hidden")
-    
+            $("aside").addClass("hidden")
         })
     
 }
@@ -357,7 +357,7 @@ async function mainLetter(name) {
     let api = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=${name}`)
     let data = await api.json()
     products =data.meals
-console.log(products)
+
     displayDataMain()
 
     $(".discripatin").on('click',function(){
