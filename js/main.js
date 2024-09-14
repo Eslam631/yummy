@@ -71,6 +71,7 @@ async function main(name) {
         $(".discripatin").on('click',function(){
             let idMeal=$(this).attr('id')
             deatiles(idMeal)
+            $("aside").addClass("hidden")
             $("section").addClass("hidden")
             $("#dscribtion").removeClass("hidden")
             $('.loading').addClass("hidden")
@@ -114,6 +115,7 @@ $(".open i").toggleClass('hidden')
 $("#dscribtion i").on('click',function(){
     $("#dscribtion").addClass("hidden")
     $("#home").removeClass("hidden")
+    $("aside").removeClass("hidden")
 })
 
 $("aside a").on('click',function(e){
@@ -270,9 +272,9 @@ function displayDataDeatiles(){
                     <p class="text-4xl font-bold p-5">Tags :
                     <div><span class="bg-red-300 p-2  text-black">${productsByCategory[i].strTags}</span></div>
                     </p>
-                    <div class="m-5">
-                   <a href="${productsByCategory[i].strSource} " target="_blank"> <button  class="bg-green-700 text-2xl p-2 text-center rounded mx-3">source</button></a>
-                   <a href="${productsByCategory[i].strYoutube}" target="_blank"> <button  class="bg-red-800 text-2xl p-2 text-center rounded mx-3">youtube</button></a>
+                    <div class="m-5 ">
+                   <a href="${productsByCategory[i].strSource} " target="_blank"> <button  class="bg-green-700 text-2xl my-3 p-2 text-center rounded mx-3">source</button></a>
+                   <a href="${productsByCategory[i].strYoutube}" target="_blank"> <button  class="bg-red-800 text-2xl my-3 p-2 text-center rounded mx-3">youtube</button></a>
                </div> </div>  `
     }
     document.getElementById("detalis").innerHTML=cartona
